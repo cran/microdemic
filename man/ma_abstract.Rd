@@ -4,8 +4,8 @@
 \alias{ma_abstract}
 \title{Fetch abstracts}
 \usage{
-ma_abstract(query, count = 10, offset = 0, orderby = NULL, key = NULL,
-  ...)
+ma_abstract(query, count = 10, offset = 0, orderby = NULL,
+  model = "latest", key = NULL, ...)
 }
 \arguments{
 \item{query}{(character) query terms}
@@ -16,6 +16,9 @@ ma_abstract(query, count = 10, offset = 0, orderby = NULL, key = NULL,
 
 \item{orderby}{(logical) column by which to order. default: none}
 
+\item{model}{(character) Name of the model that you wish to query. One of 'latest'
+or 'beta-2015'. Default: latest}
+
 \item{key}{(character) microsoft academic API key, see Details.}
 
 \item{...}{curl options passed on to \link[crul:HttpClient]{crul::HttpClient}}
@@ -25,7 +28,7 @@ Fetch abstracts
 }
 \examples{
 \dontrun{
-ma_abstract(query = "Ti='biology'...", count = 10)
-ma_abstract(query = "Ti='ecology'...", count = 10)
+ma_abstract(query = "Y=2010", count = 10)
+ma_abstract(query = "Y=[2010, 2012)", count = 10)
 }
 }

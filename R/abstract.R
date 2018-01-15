@@ -3,12 +3,12 @@
 #' @export
 #' @inheritParams ma_search
 #' @examples \dontrun{
-#' ma_abstract(query = "Ti='biology'...", count = 10)
-#' ma_abstract(query = "Ti='ecology'...", count = 10)
+#' ma_abstract(query = "Y=2010", count = 10)
+#' ma_abstract(query = "Y=[2010, 2012)", count = 10)
 #' }
 ma_abstract <- function(query, count = 10, offset = 0, orderby = NULL,
-                        key = NULL, ...) {
-  out <- ma_evaluate(query, count, offset, orderby, c("Id", "E"), key, ...)
+                        model = "latest", key = NULL, ...) {
+  out <- ma_evaluate(query, count, offset, orderby, c("Id", "E"), model, key, ...)
   unname(vapply(out$E, function(z) invabs2abs(jsonlite::fromJSON(z)$IA), ""))
 }
 

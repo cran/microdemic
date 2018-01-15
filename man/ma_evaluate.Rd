@@ -5,7 +5,8 @@
 \title{Evaluate API}
 \usage{
 ma_evaluate(query, count = 10, offset = 0, orderby = NULL,
-  atts = c("Id", "AA.AuN", "J.JN", "Ti", "Y", "E", "CC"), key = NULL, ...)
+  atts = c("Id", "AA.AuN", "J.JN", "Ti", "Y", "E", "CC"), model = "latest",
+  key = NULL, ...)
 }
 \arguments{
 \item{query}{(character) query terms}
@@ -20,6 +21,9 @@ ma_evaluate(query, count = 10, offset = 0, orderby = NULL,
 \url{https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/entityattributes}
 for details.}
 
+\item{model}{(character) Name of the model that you wish to query. One of 'latest'
+or 'beta-2015'. Default: latest}
+
 \item{key}{(character) microsoft academic API key, see Details.}
 
 \item{...}{curl options passed on to \link[crul:HttpClient]{crul::HttpClient}}
@@ -33,12 +37,18 @@ Evaluate API
 }
 \examples{
 \dontrun{
-ma_evaluate(query = "Ti='biology'...")
-ma_evaluate(query = "Composite(AA.AuN=='jaime teevan')",
+# any numeric value that starts with 19
+ma_evaluate(query = "Y='19'...")
+# author name matching, and request certain fields back
+ma_evaluate(query = "Composite(AA.AuN=='smith')",
   atts = c('Id', 'AA.AuN'))
+# matching year 2010 and request Id and Y fields
 ma_evaluate(query = "Y=2010", atts = c('Id', 'Y'))
+# range of years: includes only left boundary value: 2010, 2012
 ma_evaluate(query = "Y=[2010, 2012)", atts = c('Id', 'Y'))
+# range by specific dates
 ma_evaluate(query = "D=['2010-02-03','2010-02-05']", atts = c('Id', 'Y'))
+# matching author and matching affiliation
 x <- "Composite(And(AA.AuN='mike smith',AA.AfN='harvard university'))"
 ma_evaluate(x)
 }
