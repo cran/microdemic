@@ -1,6 +1,6 @@
 comp <- function(x) Filter(Negate(is.null), x)
 
-ma_base <- function() "https://westus.api.cognitive.microsoft.com"
+ma_base <- function() "https://api.labs.cognitive.microsoft.com"
 
 ma_HTTP <- function(path, args, key, method = "GET", body = list(),
                     encode = "form", ctype = NULL, ...) {
@@ -28,7 +28,7 @@ check_key <- function(x) {
   } else {
     x <- Sys.getenv("MICROSOFT_ACADEMIC_KEY", "")
     if (nchar(x) == 0) {
-      stop("API key needed for Microsoft Academic")
+      stop("API key needed for Microsoft Academic, see ?microdemic-package")
     } else {
       return(x)
     }
