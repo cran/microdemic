@@ -11,8 +11,12 @@ Microsoft Academic Client
 \section{Links}{
 
 \itemize{
-\item web interface: \url{https://academic.microsoft.com/}
-\item API docs: \url{https://dev.labs.cognitive.microsoft.com/docs/services/56332331778daf02acc0a50b/operations/565d9001ca73072048922d97}
+\item web interface: https://academic.microsoft.com/
+\item API docs:
+}
+\itemize{
+\item https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/
+\item https://msr-apis.portal.azure-api.net/docs/services/academic-search-api/operations/565d9001ca73072048922d97
 }
 }
 
@@ -48,7 +52,7 @@ This may vary by system and machine.
 See \code{?Startup} for details. It's likely your \code{.Renviron} file that
 is stored in your home directory. Or could be another environment
 variable holding file like \code{.zshrc} or \code{.bash_profile}. After saving the
-file, make sure to quit R, source that file like \code{source .Renviron},
+file, make sure to quit R, source that file like \verb{source .Renviron},
 then start R again. Or restart your RStudio session or similar for
 other R scenarios.
 }
