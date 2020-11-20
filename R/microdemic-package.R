@@ -1,11 +1,10 @@
-#' Microsoft Academic Client
-#'
+#' @title microdemic
+#' @description Microsoft Academic Client
 #' @section Links:
 #'
 #' * web interface: https://academic.microsoft.com/
 #' * API docs:
-#' - https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/
-#' - https://msr-apis.portal.azure-api.net/docs/services/academic-search-api/operations/565d9001ca73072048922d97
+#' - https://docs.microsoft.com/en-us/academic-services/project-academic-knowledge/introduction
 #'
 #' @section Package API:
 #'
@@ -13,13 +12,11 @@
 #' * [ma_calchist()]
 #' * [ma_evaluate()]
 #' * [ma_interpret()]
-#' * [ma_similarity()]
 #' * [ma_abstract()]
-#' * [ma_graph_search()]
 #'
 #' @section Authentication:
-#' See <https://labs.cognitive.microsoft.com/en-us/subscriptions> to get
-#' an API key. Make sure you enable Academic Knowledge and. They should 
+#' See Microsoft Academic docs link above  to get
+#' an API key. Make sure you enable Academic Knowledge. They should 
 #' give you two API keys - use either one. You can always pass your API 
 #' key as a parameter to functions in `microdemic`, but we strongly 
 #' encourage you to set an environment variable, named `MICROSOFT_ACADEMIC_KEY`
@@ -50,6 +47,6 @@
 #' @name microdemic-package
 #' @aliases microdemic
 #' @docType package
-#' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
+#' @author Scott Chamberlain
 #' @keywords package
 NULL

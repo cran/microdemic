@@ -4,7 +4,7 @@
 \name{microdemic-package}
 \alias{microdemic-package}
 \alias{microdemic}
-\title{Microsoft Academic Client}
+\title{microdemic}
 \description{
 Microsoft Academic Client
 }
@@ -15,8 +15,7 @@ Microsoft Academic Client
 \item API docs:
 }
 \itemize{
-\item https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/
-\item https://msr-apis.portal.azure-api.net/docs/services/academic-search-api/operations/565d9001ca73072048922d97
+\item https://docs.microsoft.com/en-us/academic-services/project-academic-knowledge/introduction
 }
 }
 
@@ -27,16 +26,14 @@ Microsoft Academic Client
 \item \code{\link[=ma_calchist]{ma_calchist()}}
 \item \code{\link[=ma_evaluate]{ma_evaluate()}}
 \item \code{\link[=ma_interpret]{ma_interpret()}}
-\item \code{\link[=ma_similarity]{ma_similarity()}}
 \item \code{\link[=ma_abstract]{ma_abstract()}}
-\item \code{\link[=ma_graph_search]{ma_graph_search()}}
 }
 }
 
 \section{Authentication}{
 
-See \url{https://labs.cognitive.microsoft.com/en-us/subscriptions} to get
-an API key. Make sure you enable Academic Knowledge and. They should
+See Microsoft Academic docs link above  to get
+an API key. Make sure you enable Academic Knowledge. They should
 give you two API keys - use either one. You can always pass your API
 key as a parameter to functions in \code{microdemic}, but we strongly
 encourage you to set an environment variable, named \code{MICROSOFT_ACADEMIC_KEY}
@@ -68,6 +65,6 @@ other R scenarios.
 }
 
 \author{
-Scott Chamberlain \email{myrmecocystus@gmail.com}
+Scott Chamberlain
 }
 \keyword{package}

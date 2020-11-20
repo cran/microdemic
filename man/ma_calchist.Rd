@@ -8,7 +8,7 @@ ma_calchist(
   query,
   count = 10,
   offset = 0,
-  atts = c("Id", "AA.AuN", "J.JN", "Ti", "Y", "E", "CC"),
+  atts = c("Id", "AA.AuN", "J.JN", "Ti", "Y", "CC"),
   model = "latest",
   key = NULL,
   ...
@@ -22,7 +22,7 @@ ma_calchist(
 \item{offset}{(intger) record number to start at. default: 0}
 
 \item{atts}{(character) fields to return, in a character vector. See
-\url{https://docs.microsoft.com/en-us/azure/cognitive-services/academic-knowledge/entityattributes}
+https://docs.microsoft.com/en-us/academic-services/project-academic-knowledge/reference-entity-attributes
 for details.}
 
 \item{model}{(character) Name of the model that you wish to query. One

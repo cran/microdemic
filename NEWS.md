@@ -1,10 +1,22 @@
+microdemic 0.6.0
+================
+
+### NEW FEATURES
+
+* The `E` attribute we used heavily for data for various functions here has been dropped and its sub fields brought to the top level. Just internal changes - except for that the default fields in `ma_calchist`, `ma_evaluate`, and `ma_search` now do not include `E`. See the github issue for link for details  (#17)
+
+### DEFUNCT
+
+* `ma_similarity()` is now defunct as the service at least appears to be gone or down often enough its not worth supporting (#16)
+* `ma_graph_search()` is now defunct as the service at least appears to be gone or down often enough its not worth supporting (#18)
+
 microdemic 0.5.0
 ================
 
 ### NEW FEATURES
 
 * new author Christopher Baker (#13)
-* docs website at https://docs.ropensci.org/microdemic
+* docs website added
 
 ### MINOR IMPROVEMENTS
 
@@ -31,7 +43,7 @@ microdemic 0.3.0
 ### MINOR IMPROVEMENTS
 
 * Improve docs on how to use and get API keys (#3)
-* Change base URL from `westus.api.cognitive.microsoft.com` to `api.labs.cognitive.microsoft.com`. Because of this change, you need to get use an API key from a the microsoft labs website. Get a key at <https://labs.cognitive.microsoft.com/en-us/subscriptions> and see `?microdemic-package` for details on how to use it (#2)
+* Change base URL from `westus.api.cognitive.microsoft.com` to `api.labs.cognitive.microsoft.com`. Because of this change, you need to get use an API key from a the microsoft labs website. Get a key at some url and see `?microdemic-package` for details on how to use it (#2)
 
 
 microdemic 0.2.0
